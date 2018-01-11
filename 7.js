@@ -6,6 +6,7 @@ inc(inc(5)) //7
 */
 
 /*invoke a function As a method*/
+console.log("---invoke a function As a method---");
 var obj = {
     inc:function(x){
         return x+1;
@@ -19,6 +20,7 @@ console.log();
 
 
 /*invoke a function As a function*/
+console.log("---invoke a function As a function---");
 function inc(x){
     console.log(this.x);
 }
@@ -29,6 +31,7 @@ console.log();
 
 
 /*invoke a function As a constructor*/
+console.log("---invoke a function As a constructor---");
 function Inc(x){
     return{
         inc:function(x){
@@ -44,6 +47,7 @@ console.log();
 
 
 /*inc is Alise of curry function*/
+console.log("---inc is Alise of curry function---");
 function add(x,y){
     return x+y;
 }
