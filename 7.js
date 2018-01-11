@@ -40,3 +40,21 @@ var myObject = new Inc();
 console.log(myObject.inc(5));
 console.log(myObject.inc(myObject.inc(5)));
 console.log();
+
+
+
+/*inc is Alise of curry function*/
+function add(x,y){
+    return x+y;
+}
+
+function curry(func, x){
+    function cal(y){
+        return func(x,y);
+    };
+    return cal;
+}
+
+inc =  curry(add, 1);
+console.log(inc(5));
+console.log(inc(inc(5)));
